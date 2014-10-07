@@ -1,0 +1,30 @@
+{
+  "name": "angular-mt-toggle",
+  "main": "angular-mt-toggle.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/MangoTools/angular-mt-toggle",
+  "authors": [
+    "adidoo <adrien@mango.tools>"
+  ],
+  "description": "Simple 2 or 3 states angular button using fa-toggle icon",
+  "keywords": [
+    "angular",
+    "two",
+    "three",
+    "states",
+    "button",
+    "fa-toggle"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.2.0",
+    "angular": "~1.2.26"
+  }
+}
