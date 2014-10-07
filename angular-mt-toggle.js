@@ -8,7 +8,7 @@
  */
 'use strict';
 
-angular.module('mango.toggle', [])
+angular.module('angular.mt.toggle', [])
     .directive('angularMtToggle', [
         function() {
             return {
