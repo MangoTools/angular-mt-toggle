@@ -71,7 +71,7 @@ angular.module('angular.mt.toggle', [])
                             if($scope.model>0){
                                 $scope.model=0;
                             }else if($scope.model===0){
-                                $scope.model=$scope.threeStates?undefined:1;
+                                $scope.model=$scope.threeStates?null:1;
                             }else{
                                 $scope.model=1;
                             }
@@ -79,7 +79,7 @@ angular.module('angular.mt.toggle', [])
                             if($scope.model===true){
                                 $scope.model=false;
                             }else if($scope.model===false){
-                                $scope.model=$scope.threeStates?undefined:true;
+                                $scope.model=$scope.threeStates?null:true;
                             }else{
                                 $scope.model=true;
                             }
