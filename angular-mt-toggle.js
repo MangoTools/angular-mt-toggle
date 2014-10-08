@@ -43,7 +43,7 @@ angular.module('angular.mt.toggle', [])
                     };
 
                     $scope.$watch('model', function(){
-                        if(angular.isDefined($scope.model)){
+                        if(angular.isDefined($scope.model) && $scope.model!==null){
                             if($scope.type==='number') {
                                 $scope.classes['fa-toggle-on'] = $scope.model;
                                 $scope.classes['fa-toggle-off'] = !$scope.model;
