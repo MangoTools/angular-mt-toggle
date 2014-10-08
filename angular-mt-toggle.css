@@ -1,14 +1,14 @@
-.angular-mt-toggle{
+.mt-toggle{
     font-size:1.5em;
     cursor: pointer;
     color: #808080;
     opacity: 0.5;
 }
-.angular-mt-toggle.selected{
+.mt-toggle.selected{
     color:green;
     opacity: 1;
 }
-.angular-mt-toggle.unselected{
+.mt-toggle.unselected{
     color:red;
     opacity: 1;
 }

@@ -1,6 +1,6 @@
 /*
- * angular-mt-toggle
- * https://github.com/MangoTools/angular-mt-toggle/
+ * mt-toggle
+ * https://github.com/MangoTools/mt-toggle/
 
  * Version:
  * License: MIT
@@ -9,7 +9,7 @@
 'use strict';
 
 angular.module('angular.mt.toggle', [])
-    .directive('angularMtToggle', [
+    .directive('mtToggle', [
         function() {
             return {
                 restrict: 'AE',
@@ -20,7 +20,7 @@ angular.module('angular.mt.toggle', [])
                 },
                 replace: true,
                 template:
-                    '<span class="angular-mt-toggle" ng-class="rootClasses" ng-click="toggle()">' +
+                    '<span class="mt-toggle" ng-class="rootClasses" ng-click="toggle()">' +
                     '   <i class="fa" ng-class="classes"></i>' +
                     '</span>',
 
