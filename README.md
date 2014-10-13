@@ -38,14 +38,20 @@ Can add:
 
 `type="number"` in order to switch a number between 0 and 1
 
-`three-states=true` in order to have a 3 states switch (true / false / null)
+`three-states=aValue` in order to have a 3 states switch (true / false / `aValue`)
 
-If the two options are set, values will be 1, 0 and `null`.
+`aValue` can be any thing, even null. If undefined is needed, use "undefined": 
+
+```html
+<angular-mt-toggle data-ng-model="selector" data-three-states="undefined"></angular-mt-toggle>
+```
+
+If the two options are set, values will be 1, 0 and `aValue`.
 
 Ex:
 
 ```html
-<angular-mt-toggle data-ng-model="selector" data-type="number" data-three-states=true></angular-mt-toggle>
+<angular-mt-toggle data-ng-model="selector" data-type="number" data-three-states=null></angular-mt-toggle>
 ```
 
 
