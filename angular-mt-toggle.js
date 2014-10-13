@@ -16,7 +16,7 @@ angular.module('angular.mt.toggle', [])
                 scope: {
                     model:'=ngModel',
                     type:'@',
-                    threeStates:'@' //=='true' if threestates button
+                    threeStates:'@' // three state mode if present
                 },
                 replace: true,
                 template:
@@ -29,8 +29,11 @@ angular.module('angular.mt.toggle', [])
                 },
                 controller: function($scope, $element){
 
+                    var threeStatesValue;
                     if(!angular.isDefined($scope.threeStates)){
                         $scope.threeStates=false;
+                    }else if($scope.threeStates!='undefined'){
+                        threeStatesValue=$scope.threeStates;
                     }
 
                     $scope.rootClasses = {
@@ -43,7 +46,7 @@ angular.module('angular.mt.toggle', [])
                     };
 
                     $scope.$watch('model', function(){
-                        if(angular.isDefined($scope.model) && $scope.model!==null){
+                        if(angular.isDefined($scope.model) && $scope.model!==threeStatesValue){
                             if($scope.type==='number') {
                                 $scope.classes['fa-toggle-on'] = $scope.model;
                                 $scope.classes['fa-toggle-off'] = !$scope.model;
@@ -71,7 +74,7 @@ angular.module('angular.mt.toggle', [])
                             if($scope.model>0){
                                 $scope.model=0;
                             }else if($scope.model===0){
-                                $scope.model=$scope.threeStates?null:1;
+                                $scope.model=$scope.threeStates?threeStatesValue:1;
                             }else{
                                 $scope.model=1;
                             }
@@ -79,7 +82,7 @@ angular.module('angular.mt.toggle', [])
                             if($scope.model===true){
                                 $scope.model=false;
                             }else if($scope.model===false){
-                                $scope.model=$scope.threeStates?null:true;
+                                $scope.model=$scope.threeStates?threeStatesValue:true;
                             }else{
                                 $scope.model=true;
                             }
