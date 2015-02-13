@@ -20,9 +20,9 @@ angular.module('angular.mt.toggle', [])
                 },
                 replace: true,
                 template:
-                    '<span class="mt-toggle" ng-class="rootClasses" ng-click="toggle()">' +
-                    '   <i class="fa" ng-class="classes"></i>' +
-                    '</span>',
+                '<span class="mt-toggle" ng-class="rootClasses" ng-click="toggle()">' +
+                '   <i class="fa" ng-class="classes"></i>' +
+                '</span>',
 
                 link: function postLink(scope, element) {
                     $(element).disableSelection();
@@ -47,7 +47,7 @@ angular.module('angular.mt.toggle', [])
 
                     $scope.$watch('model', function(){
                         if(angular.isDefined($scope.model) && $scope.model!==threeStatesValue){
-                            if($scope.type==='number') {
+                            if($scope.type==='number' || $scope.type==='text') {
                                 $scope.classes['fa-toggle-on'] = $scope.model;
                                 $scope.classes['fa-toggle-off'] = !$scope.model;
                                 $scope.rootClasses['selected'] = $scope.model;
@@ -77,6 +77,12 @@ angular.module('angular.mt.toggle', [])
                                 $scope.model=$scope.threeStates?threeStatesValue:1;
                             }else{
                                 $scope.model=1;
+                            }
+                        }if($scope.type==='text'){
+                            if($scope.model>0){
+                                $scope.model='';
+                            }else{
+                                $scope.model=$scope.threeStates?threeStatesValue:1;
                             }
                         }else{
                             if($scope.model===true){
