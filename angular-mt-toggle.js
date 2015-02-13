@@ -78,7 +78,7 @@ angular.module('angular.mt.toggle', [])
                             }else{
                                 $scope.model=1;
                             }
-                        }if($scope.type==='text'){
+                        }else if($scope.type==='text'){
                             if($scope.model>0){
                                 $scope.model='';
                             }else{
