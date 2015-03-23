@@ -1,7 +1,9 @@
 angular-mt-toggle
 =================
 
-Simple 2 or 3 states angular button using fa-toggle icon
+Simple 2 or 3 states angular button using fontawesome fa-toggle icon.
+
+Here an example: https://jsfiddle.net/adidoo/90e1q6wd/2/
 
 ## Install
 
